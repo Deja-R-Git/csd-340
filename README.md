@@ -1,2 +1,4 @@
-# csd-340
-Web development with HTML course with Professor Sue Sampson
+# H1 CSD 340 Web Development with HTML and CSS
+## H2 Contributors
++ Professor Sue Sasmpson
++ Created by: Juedeja Richard
