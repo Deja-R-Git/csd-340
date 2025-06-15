@@ -1,0 +1,46 @@
+/*Juedeja Richard_Module4.2_6-14-25*/
+
+#container {
+	margin-top: 10%;
+}
+
+h1 {
+	text-align: center;
+}
+
+h3 {
+	text-align: center;	
+}
+
+figure {
+	text-align:center;
+	color: purple;
+}
+
+figcaption {
+	font-style: italic;
+	font-size: .75em;
+}
+
+#image-gallery {
+	
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-rows:300px;
+	align-items: center;
+}
+
+div.images{
+	border: 3px solid purple;
+	
+}
+
+
+#bottom {
+	float: right;
+	margin-bottom: 20px;
+}
+
+a:hover {
+	color:grey;
+}

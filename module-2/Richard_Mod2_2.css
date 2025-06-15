@@ -13,7 +13,6 @@ h2 {
 	font-weight: 500;
 	test-align: left;
 	padding-top: 15px;
-	
 }
 
 p {
@@ -38,6 +37,7 @@ a:link {
 	font-size: 1.25em;
 	color:#4F3674;
 	text-decoration: none;
+
 a:visited {
 	color: yellow;}
 }
