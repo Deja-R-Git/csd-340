@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<title>CSD 340 Development with HTML and CSS</title>
+		<meta name="description"
+			content="Practice making a webpage" />
+		<meta name="keywords"
+			content="website, html, page" />
+		<meta name="robots" 
+			content="nofollow" />
+		<meta http-equiv="author"
+			content="Juedeja Richard" />
+	<link href=""  type="text/css"
+		rel= "stylesheet"/>
+
+	<script>
+        	function changeImage() {
+			document.getElementById('myFirstImage').src = "images/Dog.jpg";
+		}	
+		function changeImage2(){
+			document.getElementById('mySecondImage').src = "images/sunny.jpg";
+		}	
+	</script>
+</head>
+
+<body>
+	<h1>Assignment 10.3: JavaScript - Part 2</h1>
+	<div>
+	<img onclick="changeImage()" id="myFirstImage" src="images/Cat.jpg" alt="headshot of a gray cat" style="width:30%">
+<br>
+	Click on this Image
+	</div>
+	
+	<div>
+	<img onclick="changeImage2()" id="mySecondImage" src="images/rainy.jpg" alt="rainy day photo" style="width:30%">
+<br>
+	Or Click on this one
+	</div>
+
+	
+	<div id = "bottom">
+		<a href="../index.html">Return to Landing Page</a>
+	</div>
+
+</body>
+<html>
