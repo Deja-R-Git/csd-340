@@ -1,0 +1,82 @@
+<!-- JuedejaRichard_Module11_7-19-25 -->
+<!-- Creating a To Do List. You'll need a text box, three buttons, and instructions for the user.  -->
+ <!-- When the Display button is clicked, the contents of the array should be displayed, 
+  using a function, in order starting with 1. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <h1> Assignment 11.2: JavaScript - Part 3</h1>
+</head>
+
+<body>
+    <!-- Instructions for how to use the ToDo List -->
+    <p>This is a To-Do List. Type your first item in the text box, then click Add. 
+        Click the Display<br> button to see current items in the list.
+         Click on Delete Last Item to remove the Last Item you added.
+    </p>
+<div class="container">
+    <!-- create buttons and input boxes -->
+        <input type="text" id="todoInput" placeholder="New task...">
+        
+        <button onclick="addTask()">Add</button>
+        <button onclick="deleteTask()">Delete Last Item</button>
+        <button onclick="displayList()">Display</button>
+    </div>
+<!-- horizontal line on page -->
+    <hr> 
+
+    <div class="container" id="todoListDisplay">
+        <p class="empty-message">"Your List will Show up here!"</p>
+    </div>
+
+<!-- Javascript code section     -->
+<script>
+let tasks = [];
+      
+        function addTask(index) {
+            const inputField = document.getElementById('todoInput'); // Get the input box
+            const newTask = inputField.value.trim(); // Get text and remove spaces
+            if (newTask !== "") { // If user typed something
+                tasks.push(newTask); // Add task to array
+                inputField.value = ""; // Clears the input box
+                console.log("Task added:", newTask); // See in browser console
+            } else {
+                alert("Please type a task");
+            }
+
+            alert("Item: " + newTask + ' added as'+ ' Item '+ tasks.length);
+        }
+
+         function displayList() {
+            const displayArea = document.getElementById('todoListDisplay'); // Get the display area
+            let listHTML = '<ul>'; // Start building the HTML list
+            if (tasks.length === 0) { // If the list is empty
+                listHTML += '<li class="empty-message">No items yet! Add some.</li>';
+            } else { // If there are tasks
+                tasks.forEach(function(taskItem, index) { // Go through each task
+                    listHTML += '<li>' + 'Item ' + (index + 1) +' = '+ taskItem + '</li>'; // Add it as a list item
+                });
+            }
+            listHTML += '</ul>'; // End the HTML list
+            displayArea.innerHTML = listHTML; // Put the finished HTML onto the page
+           
+        }
+
+         function deleteTask() {
+            if (tasks.length > 0) { // If list is not empty
+                const removed = tasks.pop(); // Remove the last one
+                displayList();
+            } else {
+                alert("Nothing to delete! List is empty."); //list empty reminder
+            }
+        }
+
+        
+</script>
+
+</body>
+</html>
