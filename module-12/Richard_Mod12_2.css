@@ -1,0 +1,65 @@
+#container{
+	height: 50px;
+}
+
+h1{
+	text-align: center;
+}
+
+h3{
+	weight: 500;
+}
+
+ol{
+	weight: 300;
+}
+
+ul{
+	list-style-type: upper-roman;
+	weight: 300;
+	
+}
+
+#left{
+	float: left;
+	border: 1px solid red;
+	border-radius: 15px;
+	list-style-position: inside;
+	box-sizing: border-box;
+	width: 45%;
+	padding: 10px;
+}
+
+#right{
+	float: right;
+	border:1px dashed blue;
+	border-radius: 15px;
+	list-style-position: inside;
+	padding:10px;
+	
+	width: 45%
+}
+
+#bottom{
+	float: right;
+	margin-bottom: 20px;
+	margin-top: 20%;
+
+}
+
+a:hover {
+	color:grey;
+}
+
+button{
+	background-color: blue;
+	border: 2px solid black;
+	border-radius: 8px;
+	padding: 10px;
+	color: white;
+}
+
+button:hover{
+	background-color: red;
+	color: white;
+}

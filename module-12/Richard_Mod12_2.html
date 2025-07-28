@@ -1,0 +1,79 @@
+<!--Juedeja Richard/Module12.2-->
+<!--Take the current list of your top ten books, place the book titles into an array.-->
+<!--Create two buttons. One button should be labeled "Top to Bottom", the other button should be labeled "Bottom to Top".-->
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>CSD 340 Web Development with HTML and CSS</title>
+	<link href="Richard_Mod12_2.css" type="text/css"
+		rel= "stylesheet">
+</head>
+
+<body>
+	<div id="container">
+		<h1>Assignment 12.2: JavaScript - Part 4</h1>
+	
+		<div id ="left">
+			<h3>Top 10 Favorite Books</h3>
+				<button onclick="topToBottom()">Top to Bottom</button>
+				<button onclick="bottomToTop()">Bottom to Top</button>
+				<ol id="bookList">
+					
+
+				</ol>
+		</div>
+
+		<div id="right">
+			<h3>5 Things I’ve Learned Since the Course Started</h3>
+				<ul>
+					<li>Symbols reserved in HTML like an ampersand can be created to be displayed on a webpage</li>
+					<li>You can color backgrounds,text, and other elements with RGB values, Hex codes or regular Color Names</li>
+					<li>CSS3 added the opacity property that takes the three rgb values and adds a fourth to become rgba to specificify opacity bewtween 0.0 and 1.0 but not all browsers support it</li>
+					<li>You can create forms in the html 'form' element with passwords when the input type equals 'password'</li>
+					<li>The 'img src' is an empty element(does not need a closing tag) that will add images to a page with a relative url showing the path to the image in your own site/files</li>
+				</ul>
+		</div>
+
+		<div id="bottom">
+			<a href="../index.html">Return to Landing Page</a>
+		</div>
+
+<!-- Javascript code section     -->
+<script>
+//created book arrray 
+	let books = ["Cujo","Violent Ends", "Unwind (Unwind, #1)", "UnWholly (Unwind, #2)", "UnSouled (Unwind, #3", "UnDivided (Unwind, #4)", "Scythe (Arc of a Scythe, #1)", "Thunderhead (Arc of a Scythe, #2)", "The Toll (Arc of a Scythe, #3)", "The Schwa Was Here (Antsy Bonano, #1)"];
+
+//function for first button
+	function topToBottom(){
+		let firstToLast = '';
+
+//loops through book array and displays it
+		for(var i= 0; i < books.length; i++){
+			firstToLast += "<li>" + books[i] + "<br>";
+			bookList.innerHTML = firstToLast; //displays list in element with booklist ID
+	}
+			books.reverse();
+			
+
+}
+
+//function for second button
+	function bottomToTop(){
+		let books2 = books.toReversed(); //makes second array of books in reverse	
+		let lastToFirst =''; //variable to store second array list
+
+//loops through books2 array
+		for(var j= 0; j < books2.length; j++){
+			lastToFirst += "<li>" + books[j] + "<br>";
+			bookList.innerHTML = lastToFirst; //replaces old ordered list with new ordered list and displays it
+	}
+}
+
+
+
+</script>
+
+	</div>
+</body>
+</html>
